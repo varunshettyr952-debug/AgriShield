@@ -1,0 +1,19 @@
+{
+  "prediction": "Healthy Crop",
+  "probabilities": {
+    "Healthy Crop": 0.85,
+    "Fungal Blight Surge": 0.10,
+    "Root Rot Hazard": 0.05
+  },
+  "markdown_metrics": "### Diagnosis\nAll sensor parameters are within optimal ranges. \n\n**Recommendations:**\n* Continue current irrigation schedule.\n* No immediate pesticide application needed.",
+  "truth_table_flags": [
+    {"rule": "Apply Nitrogen/Urea", "status": "Allowed"},
+    {"rule": "Irrigate Field", "status": "Blocked (High Moisture)"},
+    {"rule": "Spray Pesticide", "status": "Allowed"}
+  ],
+  "shap_drivers": [
+    {"feature": "Moisture", "impact": 0.45},
+    {"feature": "N", "impact": -0.21},
+    {"feature": "Temp", "impact": 0.15}
+  ]
+}
